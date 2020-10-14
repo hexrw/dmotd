@@ -36,4 +36,4 @@ fi
 ```
 
 # Example:
-![alt text](https://github.com/5412x/m0td/example.jpg?raw=true)
+![alt text](https://github.com/5412x/m0td/example.png?raw=true)
