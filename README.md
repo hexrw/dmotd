@@ -1,5 +1,6 @@
 # m0td
 A simple bash script for printing useful MOTD
+Btw it's with zero not with o
 
 # Requirements:
 lolcat
