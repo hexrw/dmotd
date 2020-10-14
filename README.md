@@ -22,3 +22,14 @@ $ cd m0td
 # chmod +x m0td
 # cp m0td /usr/bin/
 ```
+
+# Usage:
+Then just run m0td whenever you want
+For example, add this command to your ~/.profile / ~/.bashrc / ~/.zshrc
+
+Or run it only on connection via ssh
+```
+if [[ -n $SSH_CONNECTION ]] ; then
+    m0td
+fi
+```
