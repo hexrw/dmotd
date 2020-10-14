@@ -12,7 +12,7 @@ figlet
 
 pfetch
 - Ubuntu: build from source - `git clone https://github.com/dylanaraps/pfetch`
-- Arch: `yay -S pfetch`
+- Arch: `yay -S pfetch` or build from source (same as above)
 
 # Installation:
 Just clone this repository and copy m0td to /usr/bin
@@ -26,7 +26,7 @@ $ cd m0td
 # Usage:
 Then just run m0td whenever you want
 
-For example, add m0td to your ~/.profile / ~/.bashrc / ~/.zshrc
+For example, add `m0td` to your ~/.profile
 
 Or add this so it runs only on connection via ssh
 ```
