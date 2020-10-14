@@ -2,6 +2,6 @@
 
 # https://github.com/5412x/m0td
 
-echo "Last login: `last --ip $USER | head -1 | cut -c 20- | cut -c -39 && cat /etc/timezone`"  | lolcat
+echo -e "Last login: `last --ip $USER | head -1 | cut -c 20- | cut -c -38`\c"  | lolcat && cat /etc/timezone | lolcat
 hostname -i | figlet | lolcat
 pfetch | lolcat
