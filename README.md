@@ -41,3 +41,6 @@ $ touch ~/.hushlogin
 # chmod -x /etc/update-motd.d/*
 ```
 editing /etc/motd is also sometimes a solution
+
+# Example:
+![example command output](https://github.com/5412x/m0td/example.png?raw=true)
