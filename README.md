@@ -34,3 +34,6 @@ if [[ -n $SSH_CONNECTION ]] ; then
     m0td
 fi
 ```
+
+# Example:
+![alt text](https://github.com/5412x/m0td/example.jpg?raw=true)
