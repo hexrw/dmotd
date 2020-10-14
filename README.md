@@ -43,4 +43,4 @@ $ touch ~/.hushlogin
 editing /etc/motd is also sometimes a solution
 
 # Example:
-![example command output](https://github.com/5412x/m0td/example.png?raw=true)
+![example command output](https://github.com/5412x/m0td/blob/main/example.png?raw=true)
