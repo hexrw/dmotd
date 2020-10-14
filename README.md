@@ -25,9 +25,10 @@ $ cd m0td
 
 # Usage:
 Then just run m0td whenever you want
-For example, add this command to your ~/.profile / ~/.bashrc / ~/.zshrc
 
-Or run it only on connection via ssh
+For example, add m0td to your ~/.profile / ~/.bashrc / ~/.zshrc
+
+Or add this so it runs only on connection via ssh
 ```
 if [[ -n $SSH_CONNECTION ]] ; then
     m0td
