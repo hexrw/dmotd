@@ -35,5 +35,9 @@ if [[ -n $SSH_CONNECTION ]] ; then
 fi
 ```
 
-# Example:
-![alt text](https://github.com/5412x/m0td/example.png?raw=true)
+You may also want to disable default SSH motd, this usually works
+```
+$ touch ~/.hushlogin
+# chmod -x /etc/update-motd.d/*
+```
+editing /etc/motd is also sometimes a solution
