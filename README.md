@@ -14,10 +14,6 @@ figlet
 - Ubuntu: sudo apt install figlet
 - Arch: `sudo pacman -S figlet`
 
-pfetch
-- Ubuntu: build from source - `git clone https://github.com/dylanaraps/pfetch`
-- Arch: `yay -S pfetch` or build from source (same as above)
-
 # Installation:
 Just clone this repository and copy m0td to /usr/bin
 ```
