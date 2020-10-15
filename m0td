@@ -19,34 +19,74 @@ MTD_LOGO="   MMM  MMMMMMMMMMMMMM   MMMMMMMM\n   EMM  MCCCCOOOOOOOCJ   WOCOOOON\n
 
 # Arguments
 if [ "$1" == "-h" ]; then
-  echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n" | lolcat
-  exit 0
+  if hash lolcat 2>/dev/null; then
+    echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n" | lolcat
+    exit 0
+  else
+    echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n"
+    exit 0
+  fi
 fi
 
 if [ "$1" == "--help" ]; then
-  echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n" | lolcat
-  exit 0
+  if hash lolcat 2>/dev/null; then
+    echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n" | lolcat
+    exit 0
+  else
+    echo -e "\n Welcome to m0td version $MTD_VERSION!\n https://github.com/5412x/m0td\n\n$MTD_LOGO\n\n m0td (with a zero) is a tool which print's simple\n pretty MOTD (Message Of The Day).\n It's much better than the default SSH MOTD and much faster\n then neofetch or screenfetch. It prints out last login,\n ipv4 address, hostname etc.\n USAGE: m0td [argument]\n Valid arguments are:\n   -h | --help  to print this help\n   -v | --version to print current version\n\n Enjoy!\n"
+    exit 0
+  fi
 fi
 
 if [ "$1" == "-v" ]; then
-  echo "$MTD_VERSION" | lolcat
-  exit 0
+  if hash lolcat 2>/dev/null; then
+    echo "$MTD_VERSION" | lolcat
+    exit 0
+  else
+    echo "$MTD_VERSION" | lolcat
+    exit 0
+  fi
 fi
 
 if [ "$1" == "--version" ]; then
-  echo "$MTD_VERSION" | lolcat
-  exit 0
+  if hash lolcat 2>/dev/null; then
+    echo "$MTD_VERSION" | lolcat
+    exit 0
+  else
+    echo "$MTD_VERSION"
+    exit 0
+  fi
 fi
 
-# Check dependencies
-command -v lolcat >/dev/null 2>&1 || { echo >&2 "Lolcat is required, but not installed..."; exit 1; }
-command -v figlet >/dev/null 2>&1 || { echo >&2 "Figlet is required, but not installed..."; exit 1; }
+# XCheck dependenciesX | They are no longer stricly required but highly recommended
+#command -v lolcat >/dev/null 2>&1 || { echo >&2 "Lolcat is required, but not installed..."; exit 1; }
+#command -v figlet >/dev/null 2>&1 || { echo >&2 "Figlet is required, but not installed..."; exit 1; }
 
 # Print last login
-echo -e "Last login: `last --ip $USER | head -1 | cut -c 20- | cut -c -37`\c"  | lolcat && cat /etc/timezone | lolcat
+if hash lolcat 2>/dev/null; then
+  echo -e "Last login: `last --ip $USER | head -1 | cut -c 20- | cut -c -37`\c" | lolcat && cat /etc/timezone | lolcat
+else
+  echo -e "Last login: `last --ip $USER | head -1 | cut -c 20- | cut -c -37`\c"  && cat /etc/timezone
+fi
 
 # Print public IP
-hostname -i | figlet | lolcat
+if hash figlet 2>/dev/null; then
+  if hash lolcat 2>/dev/null; then
+    hostname -i | figlet | lolcat
+  else
+    hostname -i | figlet
+  fi
+else
+  if hash lolcat 2>/dev/null; then
+    echo -e "\n"
+    hostname -i | lolcat
+    echo -e "\n"
+  else
+    echo -e "\n"
+    hostname -i
+    echo -e "\n"
+  fi
+fi
 
 
 
@@ -1542,4 +1582,9 @@ main() {
     done >&6
 }
 
-main "$@" | lolcat
+if hash lolcat 2>/dev/null; then
+    main "$@" | lolcat
+else
+    main "$@"
+fi
+
