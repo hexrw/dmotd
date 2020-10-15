@@ -5,12 +5,12 @@ Btw it's with zero not with o
  
 ![m0td's logo](https://github.com/5412x/m0td/blob/main/logo.png?raw=true)
 
-# Requirements:
-lolcat
+# Recommended (not strictly required but...):
+lolcat - make it colorful - you can use it for anything by piping input to it (like `ls | lolcat`)
 - Ubuntu: `sudo apt install lolcat`
 - Arch: `sudo pacman -S lolcat`
 
-figlet
+figlet - prints big IP - you also can use it for anything by piping input to it
 - Ubuntu: sudo apt install figlet
 - Arch: `sudo pacman -S figlet`
 
