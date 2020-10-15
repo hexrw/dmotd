@@ -25,6 +25,7 @@ $ cd m0td
 
 # Usage:
 Then just run m0td whenever you want
+Valid arguments are `-h` or `--help` and `-v` or `--version`
 
 For example, add `m0td` to your ~/.profile
 
