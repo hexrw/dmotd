@@ -17,7 +17,7 @@ figlet - prints big IP - you also can use it for anything by piping input to it
 # Installation:
 Just clone this repository and copy m0td to /usr/bin
 ```
-$ git clone https://github.com/5412x/m0td
+$ git clone https://github.com/hex3928/m0td
 $ cd m0td
 # chmod +x m0td
 # cp m0td /usr/bin/
