@@ -1,48 +1,73 @@
-# m0td
-A simple bash script for printing useful MOTD
+# Delightful Message Of The Day (DMOTD)
 
-Btw it's with zero not with o
- 
-![m0td's logo](https://github.com/5412x/m0td/blob/main/logo.png?raw=true)
+DMOTD is a simple Bash script designed to enhance the appearance of your Message of the Day (MOTD). It provides a visually appealing replacement for the default MOTD.
 
-# Recommended (not strictly required but...):
-lolcat - make it colorful - you can use it for anything by piping input to it (like `ls | lolcat`)
-- Ubuntu: `sudo snap install lolcat` - use snap as the version in the apt repository is currently outdated and is not working properly with this script
-- Arch: `sudo pacman -S lolcat`
+![Logo](https://github.com/hexrw/dmotd/blob/main/logo.png?raw=true)
 
-figlet - prints big IP - you also can use it for anything by piping input to it
-- Ubuntu: `sudo apt install figlet`
-- Arch: `sudo pacman -S figlet`
+## Optional Dependencies
 
-# Installation:
-Just clone this repository and copy m0td to /usr/bin
+1. **lolcat**: Colors the output
+    - Versions confirmed to be compatible are _v1.3_ and _v1.4_.
+    - Ubuntu: `sudo snap install lolcat` - Don't install from the APT repository as it often contains an outdated version of `lolcat` that might be incompatible with this script.
+    - Arch: `sudo pacman -S lolcat`
+
+3. **figlet**: ASCII fonts
+    - The only version confirmed to be compatible is __v2.2.5__.
+    - Ubuntu: `sudo apt install figlet`
+    - Arch: `sudo pacman -S figlet`
+
+## Installation
+
+As straightforward as cloning the `dmotd` script from this repository.
+
+### Example installation using Wget
+
+```sh
+# All users
+# Downloads the script from GitHub into `/usr/local/bin/dmotd` and then gives the execute permission
+wget -O /usr/local/bin/dmotd "https://github.com/hexrw/dmotd/blob/main/dmotd?raw=true" && sudo chmod +x /usr/local/bin/dmotd
 ```
-$ git clone https://github.com/hex3928/m0td
-$ cd m0td
-# chmod +x m0td
-# cp m0td /usr/bin/
+
+```sh
+# Current user only (make sure `~/.local/bin` is in PATH)
+# Downloads the script from GitHub into `~/.local/bin/dmotd` and then gives the execute permission
+wget -O ~/.local/bin/dmotd "https://github.com/hexrw/dmotd/blob/main/dmotd?raw=true" && sudo chmod +x ~/.local/bin/dmotd
 ```
 
-# Usage:
-Then just run m0td whenever you want
+## Usage
 
 Valid arguments are `-h` or `--help` and `-v` or `--version`
 
-For example, add `m0td` to your ~/.profile
+### Example Usage
 
-Or add this so it runs only on connection via ssh
+#### Disable the default MOTD
+
+```sh
+# Works for most distributions
+# You can also try to disable it by editing /etc/motd
+touch ~/.hushlogin
+sudo chmod -x /etc/update-motd.d/*
 ```
+
+#### Run `dmotd` on login
+
+Add
+
+```sh
+dmotd
+```
+
+OR
+
+```sh
+# For SSH only
 if [[ -n $SSH_CONNECTION ]] ; then
-    m0td
+    dmotd
 fi
 ```
 
-You may also want to disable default SSH motd, this usually works
-```
-$ touch ~/.hushlogin
-# chmod -x /etc/update-motd.d/*
-```
-editing /etc/motd is also sometimes a solution
+to `~/.bashrc` (if you use BASH as your default shell)
 
-# Example:
-![example command output](https://github.com/5412x/m0td/blob/main/example.png?raw=true)
+## Examples
+
+![Example Output](https://github.com/5412x/m0td/blob/main/example.png?raw=true)
