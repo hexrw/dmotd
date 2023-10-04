@@ -1,14 +1,13 @@
 #!/bin/bash
 
-
 #
-# m0td
+# Delightful Message Of The Day (DMOTD)
 #
-# A simple tool for basic MOTD, useful for SSH
+# DMOTD is a simple Bash script designed to enhance the appearance of your Message of the Day (MOTD). It provides a visually appealing replacement for the default MOTD.
 #
-# https://github.com/5412x/m0td
+# GIT Repository: https://github.com/hexrw/dmotd
 #
-# licensed under the MIT license
+# Licensed under the MIT license
 #
 
 
